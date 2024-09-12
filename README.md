@@ -29,3 +29,7 @@ HTML / CSS / JavaScript / Tailwind CSS
 * バックエンド
 Ruby 3.2.3 / Rails 7.1.3.4
 * ransack、gutentag、rails-i18n(国際化)、sorcery（ログイン機能）などのgemを使用予定です。
+
+
+### 画面遷移図
+Figma：https://www.figma.com/design/eK0Y9EDXxSJTqcKOD1obyy/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=0-1&node-type=CANVAS&t=Pfs7w4TFsfpcoYSh-0
