@@ -33,3 +33,6 @@ Ruby 3.2.3 / Rails 7.1.3.4
 
 ### 画面遷移図
 Figma：https://www.figma.com/design/eK0Y9EDXxSJTqcKOD1obyy/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=0-1&node-type=CANVAS&t=Pfs7w4TFsfpcoYSh-0
+
+### ER図
+https://www.mermaidchart.com/raw/28773692-3a79-4c36-a7df-817503a9f2c6?theme=light&version=v0.1&format=svg
