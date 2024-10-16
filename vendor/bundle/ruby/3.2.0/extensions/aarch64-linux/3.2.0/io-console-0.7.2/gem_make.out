@@ -1,0 +1,27 @@
+current directory: /myapp/vendor/bundle/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+/usr/local/bin/ruby extconf.rb
+checking for rb_io_path()... no
+checking for rb_io_descriptor()... yes
+checking for rb_io_get_write_io()... yes
+checking for rb_io_closed_p()... no
+checking for rb_io_open_descriptor()... no
+checking for termios.h... yes
+checking for cfmakeraw() in termios.h... yes
+checking for sys/ioctl.h... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+creating Makefile
+
+current directory: /myapp/vendor/bundle/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20241016-1-l4unkd sitelibdir\=./.gem.20241016-1-l4unkd clean
+
+current directory: /myapp/vendor/bundle/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20241016-1-l4unkd sitelibdir\=./.gem.20241016-1-l4unkd
+compiling console.c
+linking shared-object io/console.so
+
+current directory: /myapp/vendor/bundle/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20241016-1-l4unkd sitelibdir\=./.gem.20241016-1-l4unkd install
+/usr/bin/install -c -m 0755 console.so ./.gem.20241016-1-l4unkd/io
+
+current directory: /myapp/vendor/bundle/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20241016-1-l4unkd sitelibdir\=./.gem.20241016-1-l4unkd clean
