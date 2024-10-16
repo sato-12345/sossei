@@ -5,11 +5,11 @@ services:
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: postgresql://sato_12345_app_2j06_user:tzwcXJUW8tX6yWWYe5d1zpcZJ18Ys2QR@dpg-cs7e3em8ii6s738uqqkg-a/sato_12345_app_2j06
+      - key: DATABASE_URL
         fromDatabase:
           name: myapp-db
           property: connectionString
-      - key: f91526a9b6d0e0ffa17460e9f2303ccc
+      - key: RAILS_MASTER_KEY
         sync: false
 
 databases:
