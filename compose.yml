@@ -25,7 +25,6 @@ services:
       - .:/myapp
     environment:
       TZ: Asia/Tokyo
-      SECRET_KEY_BASE: c952b0783af37be1a874db880a25a507e4a0087bacd5beb99446d0680009ba6a9bcec3689ea022a6a27f44abbfe680572fab0c9fd66f553a586456dd4004167b
     ports:
       - "3000:3000"
     user: "1000:1000"
