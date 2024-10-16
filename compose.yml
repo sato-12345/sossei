@@ -23,16 +23,13 @@ services:
     stdin_open: true
     volumes:
       - .:/myapp
-      - bundle_data:/usr/local/bundle:cached
-      - node_modules:/myapp/node_modules
     environment:
       TZ: Asia/Tokyo
     ports:
       - "3000:3000"
+    user: "1000:1000"
     depends_on:
       db:
         condition: service_healthy
 volumes:
-  bundle_data:
   postgresql_data:
-  node_modules:
