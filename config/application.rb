@@ -29,6 +29,12 @@ module Myapp
       g.assets false           # CSS, JavaScriptファイルを自動生成しない
       g.skip_routes true       # ルーティングを自動生成しない
       g.test_framework nil     # テストファイルを自動生成しない
+
+      #〜〜中略〜〜
+      class ActiveRecord::Base
+        singleton_class.attr_accessor :timestamped_migrations
+        self.timestamped_migrations = true
+      end
     end
   end
 end
