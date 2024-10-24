@@ -1,16 +1,14 @@
-<header>
-  <nav class= "flex justify-between w-full items-center h-72px bg-thin-orange fixed top-0 left-0">
-    <div class= "dropdown dropdown-bottom dropdown-end md:hidden">
-      <!-- ドロップダウンのトリガーとしてbarsアイコンを使用 -->
-      <label tabindex="0" class= "flex items-center justify-center mr-20px hover:bg-slate-200 rounded-full px-2.5 py-5">
-        <i id="bars" class="fa-solid fa-bars fa-xl"></i>
-      </label>
-      <!-- ドロップダウンメニューの内容 -->
-      <ul tabindex="0" class= "dropdown-content menu bg-base-100 mr-20px rounded-box z-[1] w-52 p-2 shadow">
-        <%= link_to '掲示板一覧', '#', class: "p-2 mt-10px hover:bg-slate-200 rounded-md" %>
-        <%= link_to '新規登録', '#', class: "p-2 mt-10px hover:bg-slate-200 rounded-md" %>
-        <%= link_to 'ログイン', '#', class: "p-2 mt-10px hover:bg-slate-200 rounded-md" %>
-      </ul>
+<header class="bg-thin-orange h-72px fixed top-0 left-0 w-full">
+  <nav class="flex justify-between items-center w-full h-full px-6">
+    <!-- ロゴ -->
+    <div class="logo">
+      <a class="text-2xl font-bold" href="/">MyApp</a>
+    </div>
+    <!-- ナビゲーションリンクを右揃え -->
+    <div class="space-x-8 mr-9 md:flex hidden md:block">
+      <%= link_to '掲示板一覧', posts_path, class: 'text-lg m-1 py-2 px-2 font-bold hover:bg-gray rounded-md' %>
+      <%= link_to '新規登録', '#', class: 'text-lg m-1 py-2 px-2 font-bold hover:bg-gray rounded-md' %>
+      <%= link_to 'ログイン', '#', class: 'text-lg m-1 py-2 px-2 font-bold hover:bg-gray rounded-md' %>
     </div>
   </nav>
 </header>

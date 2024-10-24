@@ -18,6 +18,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/header' %>
+    <div class="content"> <!-- コンテンツエリア -->
+      <%= yield %> <!-- ここにメニューやページごとのコンテンツが入る -->
+    </div>
   </body>
 </html>
