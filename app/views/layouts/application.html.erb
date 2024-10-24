@@ -20,9 +20,16 @@
   </head>
 
   <body>
-    <%= render 'shared/header' %>
-    <div class="content"> <!-- コンテンツエリア -->
-      <%= yield %> <!-- ここにメニューやページごとのコンテンツが入る -->
+    <% if logged_in? %>
+      <%= render 'shared/header' %>
+    <% else %>
+      <%= render 'shared/before_login_header' %>
+    <% end %>
+    <!-- コンテンツエリア -->
+    <div class="content">
+      <!-- ここにメニューやページごとのコンテンツが入る -->
+      <%= yield %>
     </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>
