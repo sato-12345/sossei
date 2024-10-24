@@ -21,7 +21,10 @@
       </div>
     </div>
   </div>
-  <div class="input-group-append">
-    <%= link_to t('投稿'), new_post_path, class: 'btn btn-primary' %>
-  </div>
+  <!-- ログインしている場合のみ「投稿」ボタンを表示 -->
+  <% if logged_in? %>
+    <div class="input-group-append">
+      <%= link_to t('投稿'), new_post_path, class: 'btn btn-primary' %>
+    </div>
+  <% end %>
 </div>
