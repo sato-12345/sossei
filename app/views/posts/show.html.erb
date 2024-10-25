@@ -1,5 +1,22 @@
 <h2><%= @post.title %></h2>
 <p><%= @post.writer %></p>
-<img src="<%= @post.image_link %>" alt="書影" />
 <p><%= @post.main_text_detail %></p>
 <p><%= @post.body %></p>
+<div class='ms-auto'>
+  <!-- ログインしている場合 -->
+  <% if current_user %>
+    <!-- 投稿者の場合 -->
+    <% if @post.user_id == current_user.id %>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+        <%= link_to '#', id: "button-edit-#{@post.id}" do %>
+          <path d="M17.414 2.586a2 2 0 00-2.828 0l-10 10V16h3.414l10-10a2 2 0 000-2.828zM15 5l-3 3-3-3L12 2l3 3z"/>
+        <% end %>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+        <%= link_to post_path(@post), id: "button-delete-#{@post.id}", data: { turbo_method: :delete, turbo_confirm: '本当に削除しますか？' } do %>
+          <path fill-rule="evenodd" d="M5 4h10l1 1h3v1H3V5h3l1-1zm0 2v10h10V6H5z" clip-rule="evenodd"/>
+        <% end %>
+      </svg>
+    <% end %>
+  <% end %>
+</div>
