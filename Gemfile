@@ -59,3 +59,4 @@ group :test do
 end
 
 gem 'sorcery', '~> 0.16.0'
+gem 'kaminari'
