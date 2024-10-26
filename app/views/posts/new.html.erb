@@ -20,25 +20,25 @@
   <!-- 投稿フォーム -->
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
-      <h1><%= t('投稿') %></h1>
+      <h1><%= t("投稿") %></h1>
       <%= form_with model: @post, class: "new_post" do |f| %>
         <div class="mb-3">
-          <%= f.label :title, '書名' %>
+          <%= f.label :title, "書名" %>
           <%= f.text_field :title %>
         </div>
         <div class="mb-3">
-          <%= f.label :writer, '著者名' %>
+          <%= f.label :writer, "著者名" %>
           <%= f.text_field :writer %>
         </div>
         <div class="mb-3">
-          <%= f.label :main_text_detail, '本文詳細' %>
+          <%= f.label :main_text_detail, "本文詳細" %>
           <%= f.text_area :main_text_detail %>
         </div>
         <div class="mb-3">
-          <%= f.label :body, '感想（任意）' %>
+          <%= f.label :body, "感想（任意）" %>
           <%= f.text_area :body, required: false %>
         </div>
-        <%= f.submit '投稿', class: 'btn btn-primary' %>
+        <%= f.submit "投稿", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>

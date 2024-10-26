@@ -22,7 +22,7 @@
   <!-- ログインしている場合のみ「新規投稿」ボタンを表示 -->
   <% if logged_in? %>
     <div class="input-group-append">
-      <%= link_to t('新規投稿'), new_post_path, class: 'btn btn-primary' %>
+      <%= link_to t("新規投稿"), new_post_path, class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>
