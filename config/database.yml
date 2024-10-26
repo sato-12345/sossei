@@ -82,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: myapp_production
-  username: myapp
+  database: sato_12345_app_2j06
+  username: sato_12345_app_2j06_user
   password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
