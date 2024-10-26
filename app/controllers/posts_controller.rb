@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :require_login, only: [:new, :create]
-  
+  before_action :require_login, only: [ :new, :create ]
+
   def index
     @posts = Post.includes(:user).page(params[:page]).per(8)
   end
@@ -12,9 +12,9 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      redirect_to posts_path, notice: '投稿を作成しました'
+      redirect_to posts_path, notice: "投稿を作成しました"
     else
-      flash.now[:danger] = t('投稿を作成出来ませんでした')
+      flash.now[:danger] = t("投稿を作成出来ませんでした")
       render :new, status: :unprocessable_entity
     end
   end
@@ -26,7 +26,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path, notice: '投稿を削除しました'
+    redirect_to posts_path, notice: "投稿を削除しました"
   end
 
   private

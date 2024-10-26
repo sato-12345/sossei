@@ -11,10 +11,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  root 'static_pages#index'
+  root "static_pages#index"
   resources :users, only: %i[new create]
   resources :posts, only: %i[index new create show destroy]
-  get 'login', to: 'user_sessions#new'
-  post 'login', to: 'user_sessions#create'
-  delete 'logout', to: 'user_sessions#destroy'
+  get "login", to: "user_sessions#new"
+  post "login", to: "user_sessions#create"
+  delete "logout", to: "user_sessions#destroy"
 end
