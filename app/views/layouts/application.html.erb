@@ -15,9 +15,21 @@
     <link rel="apple-touch-icon" href="/icon.png">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+
+    <script src="https://unpkg.com/heroicons@2.0.16/dist/heroicons.min.js"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <% if logged_in? %>
+      <%= render 'shared/header' %>
+    <% else %>
+      <%= render 'shared/before_login_header' %>
+    <% end %>
+    <!-- コンテンツエリア -->
+    <div class="content">
+      <!-- ここにメニューやページごとのコンテンツが入る -->
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>

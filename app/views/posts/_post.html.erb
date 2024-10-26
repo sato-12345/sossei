@@ -1,0 +1,29 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="post-id-<%= post.id %>">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex">
+          <!-- 他の投稿に関連する内容をここに追加 -->
+          <h4 class="card-title">
+            <%= link_to post.main_text_detail, post_path(post) %>
+          </h4>
+          <div class='ms-auto'>
+            <!-- ログインしている場合 -->
+            <% if current_user %>
+              <!-- 投稿者の場合 -->
+              <% if post.user_id == current_user.id %>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                  <%= link_to post_path(post), id: "button-delete-#{post.id}", data: { turbo_method: :delete, turbo_confirm: '本当に削除しますか？' } do %>
+                    <path fill-rule="evenodd" d="M5 4h10l1 1h3v1H3V5h3l1-1zm0 2v10h10V6H5z" clip-rule="evenodd"/>
+                  <% end %>
+                </svg>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
