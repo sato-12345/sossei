@@ -1,4 +1,23 @@
 <div class="container">
+  <!-- メッセージ表示エリア -->
+  <div class="alert-container">
+    <% if flash.now[:danger] %>
+      <div class="alert alert-danger">
+        <%= flash.now[:danger] %>
+      </div>
+    <% end %>
+    <% if @post.errors.any? %>
+      <div class="alert alert-danger">
+        <h4><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h4>
+        <ul>
+          <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+  <!-- 投稿フォーム -->
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
       <h1><%= t('投稿') %></h1>
