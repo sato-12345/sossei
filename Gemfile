@@ -58,5 +58,5 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "sorcery", '~> 0.16.0'
+gem "sorcery", "~> 0.16.0"
 gem "kaminari"
