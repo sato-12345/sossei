@@ -11,7 +11,7 @@
         </ul>
       </div>
     <% end %>
-    <div class="col-md-10 col-lg-8 mx-auto">
+    <div class="">
       <h1>ユーザー登録</h1>
       <!-- ユーザー登録フォーム -->
       <%= form_with model: @user do |f| %>
@@ -34,7 +34,7 @@
         <%= f.submit "登録", class: "btn btn-primary" %>
       <% end %>
       <div class="text-center">
-        <%= link_to "ログインページへ", login_path, class: "text-lg m-1 py-2 px-2 font-bold hover:bg-gray rounded-md" %>
+        <%= link_to "ログインページへ", login_path, class: "" %>
       </div>
     </div>
   </div>

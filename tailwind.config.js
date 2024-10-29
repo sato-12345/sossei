@@ -3,8 +3,7 @@ module.exports = {
     "./app/views/**/*.html.erb",
     "./app/helpers/**/*.rb",
     "./app/assets/stylesheets/**/*.css",
-    "./app/javascript/**/*.js",
-    "./app/views/**/*.{haml,html,slim}"
+    "./app/javascript/**/*.js"
   ],
   // add daisyUI plugin
   plugins: [require("daisyui")],
