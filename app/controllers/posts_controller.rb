@@ -19,6 +19,18 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to post_path(@post), notice: "投稿を更新しました"
+    else
+      flash.now[:danger] = "投稿を更新出来ませんでした"
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   def show
     @post = Post.find(params[:id])
   end
