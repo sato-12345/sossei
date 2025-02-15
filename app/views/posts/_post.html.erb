@@ -18,6 +18,10 @@
                     <path fill-rule="evenodd" d="M5 4h10l1 1h3v1H3V5h3l1-1zm0 2v10h10V6H5z" clip-rule="evenodd"/>
                   <% end %>
                 </svg>
+                <!-- 投稿者のみに編集ボタンを表示 -->
+                <%= link_to edit_post_path(post), class: "btn btn-sm btn-warning" do %>
+                  編集
+                <% end %>
               <% end %>
             <% end %>
           </div>
